@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AVL Tree Visualizer</title>
+
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/VinayHajare/VinayHajare/VinayHajare-1/assets/images/logo.ico" type="image/x-icon">
+    <!-- CSS Sheet for styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">	
+
+    <!-- jqueury stuff.  Only used for the animation speed slider. -->		
+	<script src="ThirdParty/jquery-1.5.2.min.js"></script>
+	<script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+    <!-- JavaScript for the actual visualization code -->
+    <script src="./AnimationLib/CustomEvents.js"></script>
+    <script src="./AnimationLib/UndoFunctions.js"></script>
+    <script src="./AnimationLib/AnimatedObject.js"></script>
+    <script src="./AnimationLib/AnimatedLabel.js"></script>
+    <script src="./AnimationLib/AnimatedCircle.js"></script>
+    <script src="./AnimationLib/AnimatedRectangle.js"></script>
+    <script src="./AnimationLib/AnimatedLinkedList.js"></script>
+    <script src="./AnimationLib/HighlightCircle.js"></script>
+    <script src="./AnimationLib/Line.js"></script>
+    <script src="./AnimationLib/ObjectManager.js"></script>
+    <script src="./AnimationLib/AnimationMain.js"></script>
+
+    <!-- JavaScript for the creation of AVL tree -->
+    <script src="./AlgorithmLib/Algorithm.js"></script>
+    <script src="./AlgorithmLib/AVL.js"></script>
+
+</head>
+<body onload="init();" class="VisualizationMainPage">
+    <div id="container">
+
+        <header id="header">
+            <h1> AVL Tree Visualizer </h1>
+        </header>
+
+        <div id="mainContent">
+
+            <div id="algoControlSection">
+                	<!-- Table for buttons to control specific animation (insert/find/delete) -->
+					<!-- (filled in by javascript code specific to the animtion) -->
+					<table id="AlgorithmSpecificControls"> </table> 
+            </div>
+
+            <!-- Drawing canvas where all animation is done. -->
+            <canvas id="canvas" width="1000" height="500"></canvas>
+
+            <div id="generalAnimationControlSection">
+                	<!-- Table for buttons to control general animation (play/pause/undo) -->
+					<!-- (filled in by javascript code, specifically AnimationMain.js) -->
+
+					<table id="GeneralAnimationControls">  </table>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p> 
+                <a href="https://vinayhajare.engineer/#portfolio" target="_blank"> More like this 😎</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
